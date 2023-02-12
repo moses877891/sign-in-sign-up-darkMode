@@ -54,10 +54,10 @@ const SignUp = () => {
     const { darkMode } = useContext(DarkModeContext);
 
     return (
-        <div className={`w-full max-w-md ${darkMode ? 'text-white' : 'text-black'}`}>
+        <div className={`w-full rounded-r-md ${!darkMode ? 'text-black' : 'text-white'}`}>
             <form
                 onSubmit={handleSubmit}
-                className="px-8 pt-6 pb-8 mb-4">
+                className={`px-8 pt-6 pb-8 mb-4 form-center rounded-3xl ${darkMode ? 'bg-grey-100' : ' bg-sky-100'}`}>
                 <label>Display name</label>
                 <input
                     type='text'
